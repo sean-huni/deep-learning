@@ -1,6 +1,9 @@
 # Deep-Learning (Modern Machine Learning)
 Deep Artificial Neural Network for predicting student performance [UCI Repo Dataset](https://archive.ics.uci.edu/ml/datasets/Student+Performance?ref=datanews.io). The experimental work in this repo intends to extend on my previous Master's research on Machine Learning [Evaluating AdaBoost, 2015](http://kudzai.xyz/download/Kudzai_Huni_-_Final_Version.pdf) for predecting student performance. This time, let's do it the Deep-Learning way!   ¯\\_\_(ツ)_\_/¯
 
+## Model Accuracy
+With a very small dataset the aspect of accuracy can be concerning. However, Currently the model is "close to accurate", but can be further improved with additional techniques such as parameter-tunning, cleaning out outliers from the dataset, fitting the right number of hidden layers to the model/classifier etc...
+
 # Part-1 of 2
 Part-1 & Part-2 are exactly the same expect that Part-1 utilises high-level abstraction frameworks such as a combination of Keras & Tensorflow. Part-2 involves lower-level abstraction frameworks such as a combination of Numpy & Tensorflow.
 
