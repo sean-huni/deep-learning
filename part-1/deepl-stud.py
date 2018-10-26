@@ -139,16 +139,16 @@ classifier.add(Dense(activation="relu", units=26, kernel_initializer="uniform"))
 classifier.add(Dense(activation="relu", units=26, kernel_initializer="uniform"))
 
 # 7th Hidden Layer
-classifier.add(Dense(activation="relu", units=18, kernel_initializer="uniform"))
+classifier.add(Dense(activation="relu", units=20, kernel_initializer="uniform"))
 
 # 8th Hidden Layer
-classifier.add(Dense(activation="relu", units=12, kernel_initializer="uniform"))
+classifier.add(Dense(activation="relu", units=18, kernel_initializer="uniform"))
 
 # 9th Hidden Layer
-classifier.add(Dense(activation="relu", units=6, kernel_initializer="uniform"))
+classifier.add(Dense(activation="relu", units=16, kernel_initializer="uniform"))
 
 # 10th Hidden Layer
-classifier.add(Dense(activation="relu", units=4, kernel_initializer="uniform"))
+classifier.add(Dense(activation="relu", units=12, kernel_initializer="uniform"))
 
 # Output Layer
 classifier.add(Dense(activation="sigmoid", units=1, kernel_initializer="uniform"))
@@ -161,7 +161,7 @@ classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = [
 ###########################
 # 2.3: Train the ANN
 ###########################
-h_cb = classifier.fit(X_train, Y_train, batch_size = 10, nb_epoch = 400)
+h_cb = classifier.fit(X_train, Y_train, batch_size = 10, nb_epoch = 1000)
 
 ##############@@@@@@@@####################
 ## STEP 3: ANN MODEL EVALUATION & PREDICTIONS
@@ -184,20 +184,34 @@ cm = confusion_matrix(Y_test, y_pred)
 
 acc = accuracy_score(Y_test, y_pred) * 100.00
 
-print (f'Accuracy: {acc}')
+print (f'Accuracy : {acc}')
 
 
-
-###########################
-# 4: Visualise the Training Loss
-###########################
+##############@@@@@@@@####################
+# 4: Visualise the Training Loss & Accuracy
+##############@@@@@@@@####################
 # Keys to plot
 print(h_cb.history.keys()) 
 
-# plt.plot(h_cb.history['acc'])
-plt.plot(h_cb.history['loss'])
+###########################
+# 4.1: Plot Training Accuracy
+###########################
+plt.plot(h_cb.history['acc'], color='blue')
+plt.title('Training Accuracy vs Epoch')
+plt.ylabel('Training Accuracy')
+plt.xlabel('Epoch')
+plt.grid(True)
+plt.legend(['Training-accuracy'], loc='best')
+plt.show()
+
+###########################
+# 4.2: Plot Training Loss
+###########################
+plt.plot(h_cb.history['loss'], color='g')
 plt.title('Training Loss vs Epoch')
 plt.ylabel('Training Loss')
-plt.xlabel('epoch')
+plt.xlabel('Epoch')
+plt.legend(['Training-loss'], loc='best')
 plt.grid(True)
 plt.show()
+
