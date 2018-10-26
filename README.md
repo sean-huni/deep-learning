@@ -1,5 +1,5 @@
 # deep-learning
-Deep Artificial Neural Network for predicting student performance [UCI Repo Dataset](https://archive.ics.uci.edu/ml/datasets/Student+Performance?ref=datanews.io). The experimental work in this repo intends to extend on my previous Master's research on Machine Learning [Evaluating AdaBoost, 2015](http://kudzai.xyz/download/Kudzai_Huni_-_Final_Version.pdf) for predecting student performance. This time, let's do it the Deep-Learning way!   ¯\_(ツ)_/¯
+Deep Artificial Neural Network for predicting student performance [UCI Repo Dataset](https://archive.ics.uci.edu/ml/datasets/Student+Performance?ref=datanews.io). The experimental work in this repo intends to extend on my previous Master's research on Machine Learning [Evaluating AdaBoost, 2015](http://kudzai.xyz/download/Kudzai_Huni_-_Final_Version.pdf) for predecting student performance. This time, let's do it the Deep-Learning way!   ¯\\_(ツ)_/¯
 
 # Part-1 of 2
 Part-1 & Part-2 are exactly the same expect that Part-1 utilises high-level abstraction frameworks such as a combination of Keras & Tensorflow, and Part-2 involves lower-level abstraction frameworks such as a combination of Numpy & Tensorflow.
