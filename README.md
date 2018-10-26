@@ -6,7 +6,7 @@ Part-1 & Part-2 are exactly the same expect that Part-1 utilises high-level abst
 
 Part-2 dives deeper into most of the interesting mathmatics that happen behind the scenes, whereas in Part-1 most of the mathematics is abstracted away from the user. Oooh 😱, there's no fun in that! No Mathematics 😵 !!!
 
-We love Mathematics 😎...
+We love Mathematics 😎... But there's a lot value in high level-abstraction Machine Leanring for beginners & newbies.
 
 My vision is to inspire more Software-Engineers to co-create A.I driven applications.
 
