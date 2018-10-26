@@ -7,10 +7,10 @@ With a very small dataset the aspect of accuracy can be concerning. However, Cur
 The training accuracy was 100%, but the test accuracy was 85%... Now, one would wonder what happened? 🤔 Why such a 15% difference/discrepancy in accuracy? 🤔 Small Dataset? 🤔 Needs further pameter tuning? 🤔 Too many/little Hidden Layers? 🤔 This is exactly what makes Deep Neural Nets fun right? 🤣
 
 ### Training Accuracy
-![Successful Git Branching Model](https://raw.githubusercontent.com/sean-huni/deep-learning/master/part-1/model_accuracy.png "Accuracy of the Deep Neural Net")
+![Training Accuracy Img](https://raw.githubusercontent.com/sean-huni/deep-learning/master/part-1/model_accuracy.png "Accuracy of the Deep Neural Net")
 
 ### Training Loss
-![Successful Git Branching Model](https://raw.githubusercontent.com/sean-huni/deep-learning/master/part-1/training_loss.png "Training Loss of the Deep Neural Net")
+![Training Loss Img](https://raw.githubusercontent.com/sean-huni/deep-learning/master/part-1/training_loss.png "Training Loss of the Deep Neural Net")
 
 # Part-1 of 2
 Part-1 & Part-2 are exactly the same expect that Part-1 utilises high-level abstraction frameworks such as a combination of Keras & Tensorflow. Part-2 involves lower-level abstraction frameworks such as a combination of Numpy & Tensorflow.
