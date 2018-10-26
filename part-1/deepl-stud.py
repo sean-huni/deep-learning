@@ -18,6 +18,10 @@ dt = pd.read_csv('stud-por-preformat.csv')
 # Mapping the dataset to their correct datatypes.
 dt = dt.astype({'school':'category', 'sex':'category', 'age':'float64', 'address':'category', 'famsize':'category', 'Pstatus':'category', 'Medu':'float64', 'Fedu':'float64', 'Mjob':'category', 'Fjob':'category', 'reason':'category', 'guardian':'category', 'traveltime':'float64', 'studytime':'float64', 'failures':'float64', 'schoolsup':'bool', 'famsup':'bool', 'paid':'bool', 'activities':'bool', 'nursery':'bool', 'higher':'bool', 'internet':'bool', 'romantic':'bool', 'famrel':'float64', 'freetime':'float64', 'goout':'float64', 'Dalc':'float64', 'Walc':'float64', 'health':'float64', 'absences':'float64', 'G1':'float64', 'G2':'float64', 'G3':'float64'}) 
 
+# Shuffle the order of the records to clear out any biases.
+from sklearn.utils import shuffle
+dt = shuffle(dt)
+
 # Lets do some integrity datatype checks & prints to the console
 print(dt['age'].dtypes)
 print(dt['school'].dtypes)
@@ -117,7 +121,6 @@ from keras.layers import Dense
 classifier = Sequential()
 
 # Input & 1st Hidden Layer
-# classifier.add(Dense(output_dim = 26, init = 'uniform', activation = 'relu', input_dim = 50))
 classifier.add(Dense(activation="relu", input_dim=50, units=26, kernel_initializer="uniform"))
 
 # 2nd Hidden Layer
@@ -135,6 +138,18 @@ classifier.add(Dense(activation="relu", units=26, kernel_initializer="uniform"))
 # 6th Hidden Layer
 classifier.add(Dense(activation="relu", units=26, kernel_initializer="uniform"))
 
+# 7th Hidden Layer
+classifier.add(Dense(activation="relu", units=18, kernel_initializer="uniform"))
+
+# 8th Hidden Layer
+classifier.add(Dense(activation="relu", units=12, kernel_initializer="uniform"))
+
+# 9th Hidden Layer
+classifier.add(Dense(activation="relu", units=6, kernel_initializer="uniform"))
+
+# 10th Hidden Layer
+classifier.add(Dense(activation="relu", units=4, kernel_initializer="uniform"))
+
 # Output Layer
 classifier.add(Dense(activation="sigmoid", units=1, kernel_initializer="uniform"))
 
@@ -146,7 +161,7 @@ classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = [
 ###########################
 # 2.3: Train the ANN
 ###########################
-classifier.fit(X_train, Y_train, batch_size = 20, nb_epoch = 1500)
+h_cb = classifier.fit(X_train, Y_train, batch_size = 10, nb_epoch = 400)
 
 ##############@@@@@@@@####################
 ## STEP 3: ANN MODEL EVALUATION & PREDICTIONS
@@ -170,3 +185,19 @@ cm = confusion_matrix(Y_test, y_pred)
 acc = accuracy_score(Y_test, y_pred) * 100.00
 
 print (f'Accuracy: {acc}')
+
+
+
+###########################
+# 4: Visualise the Training Loss
+###########################
+# Keys to plot
+print(h_cb.history.keys()) 
+
+# plt.plot(h_cb.history['acc'])
+plt.plot(h_cb.history['loss'])
+plt.title('Training Loss vs Epoch')
+plt.ylabel('Training Loss')
+plt.xlabel('epoch')
+plt.grid(True)
+plt.show()
