@@ -8,6 +8,6 @@ Part-2 dives deeper into most of the interesting mathmatics that happen behind t
 
 We love Mathematics 😎...
 
-My vision is to inspire more Developers to develop A.I driven Applications.
+My vision is to inspire more Software-Engineers to co-create A.I driven applications.
 
 # Have Fun ✌(-‿-)✌ 
