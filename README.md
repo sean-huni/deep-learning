@@ -4,7 +4,7 @@ Deep Artificial Neural Network for predicting student performance [UCI Repo Data
 ## Model Accuracy 🤗
 With a very small dataset the aspect of accuracy can be concerning. However, Currently the model is "close to accurate", but can be further improved with additional techniques such as parameter-tunning, cleaning out outliers from the dataset, fitting the right number of hidden layers to the model/classifier etc...
 
-The training accuracy was 100%, but the test accuracy was 85%... Now, one would wonder what happened? 🤔 Why such a 15% difference/discrepancy in accuracy? 🤔 Small Dataset, clean out outliers or too many features(independent variables) ? 🤔 Needs further Parameter Tuning? 🤔 Too many/little Hidden Layers? 🤔 Overfitting? 🤔 Underfitting? 🤔 This is exactly what makes Deep Neural Nets fun right? 🤣 
+The training accuracy was 100%, but the test accuracy was 85%... Now, one would wonder what happened? 🤔 Why such a 15% difference/discrepancy in accuracy? 🤔 Small Dataset?🤔 clean out outliers?🤔 too many features(independent variables)?🤔 Needs further Parameter Tuning? 🤔 K-Fold Cross-Validation?🤔 Too many/few Hidden Layers? 🤔 Overfitting? 🤔 Underfitting? 🤔 This is exactly what makes Deep Neural Nets fun right? 🤣 
 
 ### Training Accuracy
 ![Training Accuracy Img](https://raw.githubusercontent.com/sean-huni/deep-learning/master/part-1/model_accuracy.png "Accuracy of the Deep Neural Net")
